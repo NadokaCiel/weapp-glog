@@ -1,0 +1,96 @@
+{
+	"description": "A weapp(微信小程序) project with ziu",
+	"packOptions": {
+		"ignore": [
+			{
+				"type": "suffix",
+				"value": ".scss"
+			},
+			{
+				"type": "folder",
+				"value": "scripts"
+			},
+			{
+				"type": "folder",
+				"value": "docs"
+			},
+			{
+				"type": "folder",
+				"value": "src"
+			},
+			{
+				"type": "folder",
+				"value": "node_modules"
+			},
+			{
+				"type": "file",
+				"value": ".babelrc"
+			},
+			{
+				"type": "file",
+				"value": ".gitignore"
+			},
+			{
+				"type": "file",
+				"value": "package.json"
+			},
+			{
+				"type": "file",
+				"value": "package-lock.json"
+			},
+			{
+				"type": "file",
+				"value": "README.md"
+			}
+		]
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"uglifyFileName": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.4.0",
+	"appid": "wx919c2fdcbbd9b3af",
+	"projectname": "weapp-glog%20-%20dev",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 0,
+			"list": [
+				{
+					"id": -1,
+					"name": "文章列表",
+					"pathName": "pages/article/list",
+					"scene": null
+				}
+			]
+		}
+	}
+}

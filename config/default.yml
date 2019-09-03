@@ -1,0 +1,6 @@
+# 默认环境变量
+APP_TITLE: weapp-glog
+PRJ_ENV: production
+APP_NAME: Glog
+APP_ID: wx919c2fdcbbd9b3af
+VERSION: 0.0.1

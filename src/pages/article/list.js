@@ -4,7 +4,7 @@ Page({
     loaded: false,
     loading: false,
     page: 1,
-    mode: 'list',
+    mode: 'box',
     articles: [1, 3],
   },
   onLoad() {},

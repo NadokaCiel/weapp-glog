@@ -36,7 +36,7 @@
       class="mode-list"
       hidden="{{mode !== 'list'}}"
     >
-      <view class="article-item" wx:for="{{articles}}" wx:key="{{index}}" wx:for-item="article" >
+      <view class="article-item list-item" wx:for="{{articles}}" wx:key="{{index}}" wx:for-item="article" >
         <view class="item-pic">
           <image></image>
         </view>
@@ -54,8 +54,27 @@
       class="mode-box"
       hidden="{{mode !== 'box'}}"
     >
-      <view class="mode-box-left"></view>
-      <view class="mode-box-right"></view>
+      <view class="{{index % 2 === 0 ? 'mode-box-left' : 'mode-box-right'}}" wx:for="{{2}}" wx:for-item="boxIndex" wx:key="{{boxIndex}}">
+        <view
+          class="article-item box-item"
+          wx:for="{{articles}}"
+          wx:key="{{index}}"
+          wx:for-item="article"
+          wx:if="{{index % 2 === boxIndex}}"
+        >
+          <view class="item-pic">
+            <image></image>
+          </view>
+          <view class="item-content">
+            <view class="item-title">标题</view>
+            <view class="item-detail elli elli-4">文章正文文章正文文章正文文章正文文章正文文章正文文章正文文章正文文章正文文章正文文章正文</view>
+            <view class="item-foot elli elli-1">
+              <text>作者：***</text>
+              <text>2019-09-03 16:33:00</text>
+            </view>
+          </view>
+        </view>
+      </view>
     </view>
     <view class="all-loaded-info">已经没有更多文章啦~</view>
   </view>

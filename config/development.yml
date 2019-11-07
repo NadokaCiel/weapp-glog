@@ -1,2 +1,5 @@
 # 开发环境变量
 PRJ_ENV: development
+API_KEY: ciel
+API_CODE: dinota
+DOMAIN: http://admin-server.ciel.net:3000

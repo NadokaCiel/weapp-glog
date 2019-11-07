@@ -1,6 +1,7 @@
 {
     "pages":[
         "pages/index/index",
+        "pages/user/info",
         "pages/article/list"
     ],
     "networkTimeout": {

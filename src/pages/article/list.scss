@@ -61,6 +61,11 @@
   border: 2rpx solid #ddd;
 }
 
+.item-content {
+  display: flex;
+  flex-direction: column;
+}
+
 .list-item {
   display: flex;
   align-items: center;
@@ -89,6 +94,8 @@
   }
 
   .item-foot {
+    margin-top: auto;
+    margin-bottom: 0;
     font-size: 24rpx;
     color: #bbb;
     text-align: right;
@@ -129,7 +136,8 @@
   }
 
   .item-foot {
-    margin-top: 10rpx;
+    margin-top: auto;
+    margin-bottom: 0;
     font-size: 24rpx;
     color: #bbb;
     text-align: right;

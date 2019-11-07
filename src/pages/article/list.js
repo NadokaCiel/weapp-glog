@@ -5,10 +5,16 @@ Page({
     loading: false,
     page: 1,
     mode: 'box',
-    articles: [1, 3],
+    articles: [],
   },
-  onLoad() {},
-  onShow() {},
+  onLoad() {
+    // this.setData({
+    //   articles: Array(8).fill(1),
+    // });
+    this.getList();
+  },
+  onShow() {
+  },
   changeMode(event) {
     const {
       currentTarget: {
@@ -26,10 +32,11 @@ Page({
     console.log('下拉刷新~');
     if (this.data.loading) return;
     this.setData({
+      articles: [],
       page: 1,
       loaded: false,
     });
-    // this.getList();
+    this.getList();
   },
   onReachBottom() {
     console.log('到底啦~');

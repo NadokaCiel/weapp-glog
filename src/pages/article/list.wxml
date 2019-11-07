@@ -41,11 +41,11 @@
           <image></image>
         </view>
         <view class="item-content">
-          <view class="item-title">标题</view>
-          <view class="item-detail elli elli-2">文章正文文章正文文章正文文章正文文章正文文章正文文章正文文章正文文章正文文章正文文章正文</view>
+          <view class="item-title">{{article.title}}</view>
+          <view class="item-detail elli elli-2">{{article.abstract}}</view>
           <view class="item-foot elli elli-1">
-            <text>作者：***</text>
-            <text>2019-09-03 16:33:00</text>
+            <text wx:if="{{article.creator}}">作者：{{article.creator.user_name}}</text>
+            <text>{{article.update_time}}</text>
           </view>
         </view>
       </view>
@@ -66,11 +66,11 @@
             <image></image>
           </view>
           <view class="item-content">
-            <view class="item-title">标题</view>
-            <view class="item-detail elli elli-4">文章正文文章正文文章正文文章正文文章正文文章正文文章正文文章正文文章正文文章正文文章正文</view>
+            <view class="item-title">{{article.title}}</view>
+            <view class="item-detail elli elli-4">{{article.abstract}}</view>
             <view class="item-foot elli elli-1">
-              <text>作者：***</text>
-              <text>2019-09-03 16:33:00</text>
+              <text wx:if="{{article.creator}}">作者：{{article.creator.user_name}}</text>
+              <text>{{article.update_time}}</text>
             </view>
           </view>
         </view>

@@ -1,0 +1,5 @@
+<view class="article-view">
+  <view class="article-title">{{article.title}}</view>
+  <view class="article-author">{{article.author}}</view>
+  <rich-text class="article-content" nodes="{{article.content}}"></rich-text>
+</view>

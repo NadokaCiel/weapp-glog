@@ -22,7 +22,7 @@
     <view
       class="no-data-hint no-data-info"
       hidden="{{loading && !loaded}}"
-    >/w\ 没有结果，换个搜索词？</view>
+    >/w\ 暂无结果</view>
     <view
       class="no-data-hint no-data-info"
       hidden="{{!loading}}"
@@ -36,16 +36,16 @@
       class="mode-list"
       hidden="{{mode !== 'list'}}"
     >
-      <view class="article-item list-item" wx:for="{{articles}}" wx:key="{{index}}" wx:for-item="article" >
+      <view class="article-item list-item" bindtap="toView" data-id="{{article.id}}" wx:for="{{articles}}" wx:key="index" wx:for-item="article" >
         <view class="item-pic">
-          <image></image>
+          <image mode="aspectFill" src="{{article.cover || defaultPic}}"></image>
         </view>
         <view class="item-content">
           <view class="item-title">{{article.title}}</view>
           <view class="item-detail elli elli-2">{{article.abstract}}</view>
           <view class="item-foot elli elli-1">
             <text wx:if="{{article.creator}}">作者：{{article.creator.user_name}}</text>
-            <text>{{article.update_time}}</text>
+            <text>{{article.create_time}}</text>
           </view>
         </view>
       </view>
@@ -54,23 +54,25 @@
       class="mode-box"
       hidden="{{mode !== 'box'}}"
     >
-      <view class="{{index % 2 === 0 ? 'mode-box-left' : 'mode-box-right'}}" wx:for="{{2}}" wx:for-item="boxIndex" wx:key="{{boxIndex}}">
+      <view class="{{index % 2 === 0 ? 'mode-box-left' : 'mode-box-right'}}" wx:for="{{2}}" wx:for-item="boxIndex" wx:key="boxIndex">
         <view
           class="article-item box-item"
           wx:for="{{articles}}"
-          wx:key="{{index}}"
+          wx:key="index"
           wx:for-item="article"
           wx:if="{{index % 2 === boxIndex}}"
+          bindtap="toView"
+          data-id="{{article.id}}"
         >
           <view class="item-pic">
-            <image></image>
+            <image mode="aspectFill" src="{{article.cover || defaultPic}}"></image>
           </view>
           <view class="item-content">
             <view class="item-title">{{article.title}}</view>
             <view class="item-detail elli elli-4">{{article.abstract}}</view>
             <view class="item-foot elli elli-1">
               <text wx:if="{{article.creator}}">作者：{{article.creator.user_name}}</text>
-              <text>{{article.update_time}}</text>
+              <text>{{article.create_time}}</text>
             </view>
           </view>
         </view>

@@ -3,3 +3,4 @@ PRJ_ENV: development
 API_KEY: ciel
 API_CODE: dinota
 DOMAIN: http://admin-server.ciel.net:3000
+# DOMAIN: http://120.27.3.78:3000

@@ -17,6 +17,7 @@
     margin: 0 4rpx;
     width: 60rpx;
     height: 60rpx;
+    color: #aaa;
 
     .iconfont {
       font-size: 32rpx;
@@ -24,7 +25,7 @@
   }
 
   .active-tool {
-    color: #fff;
+    color: rgb(34, 34, 34);
   }
 }
 
@@ -146,4 +147,9 @@
       margin-left: 12rpx;
     }
   }
+}
+
+.item-pic image {
+  width: 100%;
+  height: 100%;
 }

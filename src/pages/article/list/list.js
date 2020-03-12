@@ -1,4 +1,5 @@
 const app = getApp();
+
 Page({
   data: {
     loaded: false,
@@ -6,6 +7,7 @@ Page({
     page: 1,
     mode: 'box',
     articles: [],
+    defaultPic: "http://a2.att.hudong.com/36/48/19300001357258133412489354717.jpg",
   },
   onLoad() {
     // this.setData({
@@ -76,6 +78,20 @@ Page({
           loading: false,
         });
       });
+  },
+  toView(e) {
+    console.log(e);
+    const {
+      currentTarget: {
+        dataset: {
+          id,
+        },
+      },
+    } = e;
+    console.log('id', id);
+    wx.navigateTo({
+      url: `/pages/article/view/view?id=${id}`,
+    });
   },
   onUnload() {},
 });

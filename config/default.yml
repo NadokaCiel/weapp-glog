@@ -4,3 +4,6 @@ PRJ_ENV: production
 APP_NAME: Glog
 APP_ID: wx919c2fdcbbd9b3af
 VERSION: 0.0.1
+API_KEY: ciel
+API_CODE: dinota
+DOMAIN: http://120.27.3.78:3000

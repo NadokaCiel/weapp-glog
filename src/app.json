@@ -1,8 +1,9 @@
 {
     "pages":[
+        "pages/article/list/list",
         "pages/index/index",
         "pages/user/info",
-        "pages/article/list"
+        "pages/article/view/view"
     ],
     "networkTimeout": {
         "request": 10000

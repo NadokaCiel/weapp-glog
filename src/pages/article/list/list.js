@@ -77,6 +77,7 @@ Page({
         this.setData({
           loading: false,
         });
+        wx.stopPullDownRefresh();
       });
   },
   toView(e) {

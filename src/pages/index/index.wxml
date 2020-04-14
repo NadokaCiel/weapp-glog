@@ -1,4 +1,20 @@
 <!--index-->
 <view class="index">
-    首页
+  <view class="index-title">方向测试</view>
+  <view>
+    <view class="index-line">alpha: {{alpha}}</view>
+    <view class="index-line">beta: {{beta}}</view>
+    <view class="index-line">gamma: {{gamma}}</view>
+    <view class="index-line">当前位置：{{direction}}</view>
+    <view class="index-line">倾斜方向：{{text}}</view>
+    <view class="index-line">倾斜角度：{{rotate}}</view>
+  </view>
+  <view class="upsidedown">
+    <view class="index-line">alpha: {{alpha}}</view>
+    <view class="index-line">beta: {{beta}}</view>
+    <view class="index-line">gamma: {{gamma}}</view>
+    <view class="index-line">当前位置：{{direction}}</view>
+    <view class="index-line">倾斜方向：{{text}}</view>
+    <view class="index-line">倾斜角度：{{rotate}}</view>
+  </view>
 </view>

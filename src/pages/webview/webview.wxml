@@ -1,0 +1,4 @@
+<!--index-->
+<view style="height: 100vh;">
+    <web-view wx:if="{{showWebView}}" src="{{url}}" bindmessage="getMessage"></web-view>
+</view>

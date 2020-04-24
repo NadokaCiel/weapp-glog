@@ -3,7 +3,8 @@
         "pages/article/list/list",
         "pages/index/index",
         "pages/user/info",
-        "pages/article/view/view"
+        "pages/article/view/view",
+        "pages/webview/webview"
     ],
     "networkTimeout": {
         "request": 10000

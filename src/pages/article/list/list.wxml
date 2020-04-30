@@ -38,7 +38,7 @@
     >
       <view class="article-item list-item" bindtap="toView" data-id="{{article.id}}" wx:for="{{articles}}" wx:key="index" wx:for-item="article" >
         <view class="item-pic">
-          <image mode="aspectFill" src="{{article.cover || defaultPic}}"></image>
+          <image mode="aspectFit" src="{{article.cover || defaultPic}}"></image>
         </view>
         <view class="item-content">
           <view class="item-title">{{article.title}}</view>
@@ -65,7 +65,7 @@
           data-id="{{article.id}}"
         >
           <view class="item-pic">
-            <image mode="aspectFill" src="{{article.cover || defaultPic}}"></image>
+            <image mode="aspectFit" src="{{article.cover || defaultPic}}"></image>
           </view>
           <view class="item-content">
             <view class="item-title">{{article.title}}</view>

@@ -6,4 +6,5 @@ APP_ID: wx919c2fdcbbd9b3af
 VERSION: 0.0.1
 API_KEY: ciel
 API_CODE: dinota
-DOMAIN: http://120.27.3.78:3000
+# DOMAIN: http://120.27.3.78:3000
+DOMAIN: http://nadokaciel.cn:3000

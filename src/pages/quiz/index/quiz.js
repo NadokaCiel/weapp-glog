@@ -44,10 +44,10 @@ Page({
         value,
       },
     } = e;
-    console.log("onMultiChange", value);
+    console.log("onMultiChange", value.sort());
     const path = `answerMap.${id}`;
     this.setData({
-      [path]: value,
+      [path]: value.sort(),
     });
   },
   onSingleChange(e) {
@@ -68,7 +68,44 @@ Page({
     });
   },
   submitQuiz() {
-    console.log('answerMap', this.data.answerMap);
+    const { quiz, answerMap, subjects } = this.data;
+    console.log('answerMap', answerMap);
+    // const answer = [];
+    // Object.keys(answerMap).forEach(key => {
+
+    //   answer.push({
+    //     id: key,
+    //     answer: answerMap[key],
+    //   });
+    // });
+    if (Object.keys(answerMap).length < subjects.length) {
+      wx.showToast({
+        title: '问卷未完成哦~',
+        icon: 'none',
+        duration: 2000,
+      });
+      return;
+    }
+    wx.showLoading();
+    app.api.quizCorrect({
+      restful: {
+        id: quiz.id,
+      },
+      data: {
+        sheet: answerMap,
+      },
+    })
+      .then(({ data }) => {
+        console.log('quizCorrect', data);
+        wx.showToast({
+          title: `您的得分为：${data.score}`,
+          icon: 'none',
+          duration: 2000,
+        });
+      })
+      .finally(() => {
+        wx.hideLoading();
+      });
   },
   onHide() {},
   onUnload() {},

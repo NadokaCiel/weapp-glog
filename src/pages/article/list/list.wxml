@@ -1,4 +1,5 @@
 <view class="article-list">
+  <wxs src="../../../wxlib/md.wxs" module="md"></wxs>
   <view class="article-tools">
     <view
       class="article-tool {{mode === 'list' ? 'active-tool' : ''}}"
@@ -45,7 +46,7 @@
           <view class="item-detail elli elli-2">{{article.abstract}}</view>
           <view class="item-foot elli elli-1">
             <text wx:if="{{article.creator}}">作者：{{article.creator.user_name}}</text>
-            <text>{{article.create_time}}</text>
+            <text>{{md.formatDate(article.create_time)}}</text>
           </view>
         </view>
       </view>
@@ -72,7 +73,7 @@
             <view class="item-detail elli elli-4">{{article.abstract}}</view>
             <view class="item-foot elli elli-1">
               <text wx:if="{{article.creator}}">作者：{{article.creator.user_name}}</text>
-              <text>{{article.create_time}}</text>
+              <text>{{md.formatDate(article.create_time)}}</text>
             </view>
           </view>
         </view>

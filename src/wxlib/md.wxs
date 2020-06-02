@@ -1,0 +1,49 @@
+const round = (num, decimalPlaces = 0) => {
+  const d = decimalPlaces;
+  const m = 10 ** d;
+  const n = d ? num * m : num;
+  const r = Math.round(n);
+  return d ? r / m : r;
+};
+
+const price = (value) => round(value / 100, 2).toFixed(2);
+
+const priceInt = (value) => price(value).split(".")[0] || "0";
+
+const priceFixed = (value) => {
+  const list = price(value).split(".");
+  if (list && list[1]) {
+    return `.${list[1]}`;
+  }
+  return ".00";
+};
+
+const formatDate = (value, type = 0) => {
+  const time = getDate(value);
+  const year = time.getFullYear();
+  let month = time.getMonth() + 1;
+  let date = time.getDate();
+  let hour = time.getHours();
+  let minute = time.getMinutes();
+  let second = time.getSeconds();
+  month = month < 10 ? `0${month}` : month;
+  date = date < 10 ? `0${date}` : date;
+  hour = hour < 10 ? `0${hour}` : hour;
+  minute = minute < 10 ? `0${minute}` : minute;
+  second = second < 10 ? `0${second}` : second;
+  const arr = [
+    `${year}-${month}-${date} ${hour}:${minute}:${second}`,
+    // year + "-" + month + "-" + date + " " + hour + ":" + minute + ":" + second,
+    // year + "年" + month + "月" + date + " " + hour + ":" + minute + ":" + second,
+    // year + "年" + month + "月" + date,
+    // hour + ":" + minute + ":" + second,
+  ];
+  return arr[type];
+};
+
+module.exports = {
+  price,
+  priceInt,
+  priceFixed,
+  formatDate,
+};

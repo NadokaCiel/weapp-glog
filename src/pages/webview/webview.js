@@ -2,7 +2,7 @@
 Page({
   data: {
     showWebView: false,
-    url: 'http://120.27.3.78/#/lab/garden',
+    url: 'http://nadokaciel.cn/#/lab/garden',
   },
   onLoad() {
   },

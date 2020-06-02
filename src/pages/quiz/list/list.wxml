@@ -1,0 +1,38 @@
+<view class="quiz-list">
+  <wxs src="../../../wxlib/md.wxs" module="md"></wxs>
+  <view
+    class="no-data-content"
+    wx:if="{{quizs.length <= 0}}"
+  >
+    <view
+      class="no-data-hint no-data-info"
+      hidden="{{loading && !loaded}}"
+    >/w\ 暂无结果</view>
+    <view
+      class="no-data-hint no-data-info"
+      hidden="{{!loading}}"
+    >数据加载中...</view>
+  </view>
+  <view
+    class="quiz-content"
+    wx:if="{{quizs.length > 0}}"
+  >
+    <view
+      class="mode-list"
+    >
+      <view class="quiz-item list-item" bindtap="toView" data-id="{{quiz.id}}" wx:for="{{quizs}}" wx:key="index" wx:for-item="quiz" >
+        <view class="item-pic">
+          <image mode="aspectFit" src="{{quiz.cover || defaultPic}}"></image>
+        </view>
+        <view class="item-content">
+          <view class="item-title">{{quiz.title}}</view>
+          <view class="item-foot elli elli-1">
+            <text wx:if="{{quiz.creator}}">作者：{{quiz.creator.user_name}}</text>
+            <text>{{md.formatDate(quiz.create_time)}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="all-loaded-info">已经没有更多问卷啦~</view>
+  </view>
+</view>

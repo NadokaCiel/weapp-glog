@@ -1,0 +1,63 @@
+<!--quiz-->
+<view class="quiz">
+  <view class="quiz-title">{{quiz.title}}</view>
+  <view
+    class="quiz-author"
+    wx:if="{{quiz.author}}"
+  >命题人：{{quiz.author}}</view>
+  <view class="quiz-content">
+    <view
+      class="subject-line"
+      wx:for="{{subjects}}"
+      wx:key="index"
+      wx:for-item="subject"
+    >
+      <view class="subject-content">{{index + 1}}. {{subject.content}}{{subject.type === 'MULTI-SELECT' ? ' (多选)' : ''}}</view>
+      <checkbox-group
+        wx:if="{{subject.type === 'multi_select'}}"
+        class="subject-options"
+        bindchange="onMultiChange"
+        data-id="{{subject.id}}"
+      >
+        <label
+          class="subject-option"
+          wx:for="{{subject.options}}"
+          wx:for-index="opi"
+          wx:key="opi"
+          wx:for-item="option"
+        >
+          <checkbox
+            class="subject-option-box"
+            value="{{opi}}"
+            checked="{{option.checked}}"
+          />
+          <view class="subject-option-text">{{alphabet[opi]}}. {{option.text}}</view>
+        </label>
+      </checkbox-group>
+      <radio-group
+        wx:if="{{subject.type === 'select'}}"
+        class="subject-options"
+        bindchange="onSingleChange"
+        data-id="{{subject.id}}"
+      >
+        <label
+          class="subject-option"
+          wx:for="{{subject.options}}"
+          wx:for-index="opi"
+          wx:key="opi"
+          wx:for-item="option"
+        >
+          <radio
+            class="subject-option-box"
+            value="{{opi}}"
+            checked="{{option.checked}}"
+          />
+          <view class="subject-option-text">{{alphabet[opi]}}. {{option.text}}</view>
+        </label>
+      </radio-group>
+    </view>
+  </view>
+  <view class="quiz-bottom">
+    <view class="quiz-submit" bindtap="submitQuiz">提交</view>
+  </view>
+</view>

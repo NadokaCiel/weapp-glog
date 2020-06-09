@@ -26,6 +26,26 @@ const api = vsApi({
   appKey: conf.apiKey,
   appCode: conf.apiCode,
   apiList: getApiList(),
+  resSuccessCallback(data, next) {
+    // next接受3个参数
+    // 第一个参数是代表error
+    // 第二个参数是代表传递给 resolve 的数据
+    // 第三个参数是自定义数据
+    // console.log("resSuccessCallback", this);
+    if (data.retcode === 200) {
+      next(null, data.data, data.retcode);
+    } else {
+      next(
+        {
+          msg: data.msg,
+          retcode: data.retcode,
+          data: data.data,
+        },
+        {},
+        data.retcode,
+      );
+    }
+  },
   // 是否开启拦截器，return true时会执行resInterceptor方法
   // 所有接口公用的拦截器
   // 建议这里处理token过期的逻辑

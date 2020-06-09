@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "问卷列表",
+  "navigationBarTitleText": "问卷结果",
   "enablePullDownRefresh": true,
   "usingComponents": {}
 }

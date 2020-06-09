@@ -57,7 +57,7 @@
       </radio-group>
     </view>
   </view>
-  <view class="quiz-bottom">
-    <view class="quiz-submit" bindtap="submitQuiz">提交</view>
+  <view class="quiz-bottom" hidden="{{!quiz.id}}">
+    <button class="quiz-submit" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">提交</button>
   </view>
 </view>

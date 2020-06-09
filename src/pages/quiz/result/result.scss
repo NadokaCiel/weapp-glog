@@ -1,0 +1,46 @@
+.quiz-result {
+  min-height: 100vh;
+  padding-top: 40rpx;
+}
+
+.result-content {
+  text-align: center;
+}
+
+.result-title {
+  margin: 48rpx auto;
+  font-size: 42rpx;
+}
+
+.result-subtitle {
+  margin: 18rpx auto;
+  font-size: 32rpx;
+}
+
+.result-grade {
+  margin: 20rpx auto;
+  font-size: 52rpx;
+}
+
+.result-comment {
+  margin: 40rpx auto;
+  font-size: 32rpx;
+}
+
+.result-avatar {
+  &-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40rpx auto;
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 50%;
+  }
+
+  &-image {
+    width: 180rpx;
+    height: 180rpx;
+    border-radius: 50%;
+  }
+}

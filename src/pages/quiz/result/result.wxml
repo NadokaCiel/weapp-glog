@@ -1,0 +1,15 @@
+<view class="quiz-result">
+  <view class="result-content" hidden="{{!transcript.id}}">
+    <view class="result-title">问卷：{{transcript.title}}</view>
+    <view class="result-avatar-box">
+      <image
+        class="result-avatar-image"
+        src="{{transcript.user_avatar}}"
+        mode="aspectFill"
+      ></image>
+    </view>
+    <view class="result-subtitle">您的得分为：</view>
+    <view class="result-grade">{{transcript.score}}分</view>
+    <view class="result-comment">{{comment}}</view>
+  </view>
+</view>

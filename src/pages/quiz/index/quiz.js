@@ -6,16 +6,27 @@ Page({
     quiz: {},
     subjects: [],
     answerMap: {},
+    userInfo: {},
   },
   onLoad(opt) {
-    if (!opt.id) return;
-    this.getInfo(opt.id);
+    console.log(opt);
+    let quizId = "";
+    if (opt.id) {
+      quizId = opt.id;
+    }
+    if (opt.scene) {
+      const scene = decodeURIComponent(opt.scene);
+      quizId = scene;
+    }
+    if (!quizId) return;
+    this.getInfo(quizId);
   },
   onShow() {
     // const vm = this;
     console.log(this.data.answerMap);
   },
   getInfo(id) {
+    const vm = this;
     wx.showLoading();
     app.api.quizInfo({
       restful: {
@@ -27,6 +38,25 @@ Page({
           quiz: data,
           subjects: data.subjects,
         });
+      })
+      .catch((err) => {
+        console.log('catch', err);
+        if (err.retcode === 42000) {
+          wx.showModal({
+            title: '提示',
+            content: '您已经提交过本问卷啦，将为您跳转至结果页',
+            showCancel: false,
+            success() {
+              vm.toGrade(err.data.old_id);
+            },
+          });
+        } else {
+          wx.showToast({
+            title: err.msg || '问卷获取失败',
+            icon: 'none',
+            duration: 2000,
+          });
+        }
       })
       .finally(() => {
         wx.hideLoading();
@@ -67,17 +97,53 @@ Page({
       [path]: [value],
     });
   },
-  submitQuiz() {
-    const { quiz, answerMap, subjects } = this.data;
-    console.log('answerMap', answerMap);
-    // const answer = [];
-    // Object.keys(answerMap).forEach(key => {
+  bindGetUserInfo(e) {
+    const vm = this;
+    const {
+      detail: {
+        errMsg,
+        userInfo,
+      },
+    } = e;
+    if (errMsg.indexOf('fail') >= 0) {
+      wx.showToast({
+        title: '请同意授权后再提交问卷哦~',
+        icon: 'none',
+        duration: 2000,
+      });
+      return;
+    }
+    console.log('userInfo', userInfo);
 
-    //   answer.push({
-    //     id: key,
-    //     answer: answerMap[key],
-    //   });
-    // });
+    vm.setData({
+      userInfo: {
+        user_name: userInfo.nickName,
+        user_avatar: userInfo.avatarUrl,
+      },
+    });
+
+    wx.showModal({
+      title: '提示',
+      content: '请确认您是否已经完成问卷的全部内容~',
+      success(res) {
+        if (res.confirm) {
+          console.log('用户点击确定');
+          vm.submitQuiz();
+        } else if (res.cancel) {
+          console.log('用户点击取消');
+        }
+      },
+    });
+  },
+  submitQuiz() {
+    const vm = this;
+    const {
+      quiz,
+      answerMap,
+      subjects,
+      userInfo,
+    } = vm.data;
+    console.log('answerMap', answerMap);
     if (Object.keys(answerMap).length < subjects.length) {
       wx.showToast({
         title: '问卷未完成哦~',
@@ -92,20 +158,47 @@ Page({
         id: quiz.id,
       },
       data: {
+        ...userInfo,
         sheet: answerMap,
       },
     })
       .then(({ data }) => {
         console.log('quizCorrect', data);
-        wx.showToast({
-          title: `您的得分为：${data.score}`,
-          icon: 'none',
-          duration: 2000,
-        });
+        vm.toGrade(data.id);
+        // wx.showToast({
+        //   title: `您的得分为：${data.score}`,
+        //   icon: 'none',
+        //   duration: 2000,
+        // });
+      })
+      .catch((err) => {
+        console.log('catch', err);
+        if (err.retcode === 42000) {
+          wx.showModal({
+            title: '提示',
+            content: '您已经提交过本问卷啦，将为您跳转至结果页',
+            showCancel: false,
+            success() {
+              vm.toGrade(err.data.old_id);
+            },
+          });
+        } else {
+          wx.showToast({
+            title: err.msg || '提交失败',
+            icon: 'none',
+            duration: 2000,
+          });
+        }
       })
       .finally(() => {
         wx.hideLoading();
       });
+  },
+  toGrade(id) {
+    console.log('toGrade', id);
+    wx.navigateTo({
+      url: `/pages/quiz/result/result?id=${id}`,
+    });
   },
   onHide() {},
   onUnload() {},

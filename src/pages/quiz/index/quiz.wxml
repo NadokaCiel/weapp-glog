@@ -12,7 +12,7 @@
       wx:key="index"
       wx:for-item="subject"
     >
-      <view class="subject-content">{{index + 1}}. {{subject.content}}{{subject.type === 'MULTI-SELECT' ? ' (多选)' : ''}}</view>
+      <view class="subject-content">{{index + 1}}. {{subject.content}}{{subject.type === 'multi_select' ? ' (多选)' : ''}}</view>
       <checkbox-group
         wx:if="{{subject.type === 'multi_select'}}"
         class="subject-options"

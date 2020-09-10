@@ -17,4 +17,8 @@
     <view class="index-line">倾斜方向：{{text}}</view>
     <view class="index-line">倾斜角度：{{rotate}}</view>
   </view>
+  <!-- <view class="footer-bar">
+    <view class="bar-top"></view>
+    <view class="bar-bottom"></view>
+  </view> -->
 </view>

@@ -7,7 +7,8 @@
         "pages/webview/webview",
         "pages/quiz/list/list",
         "pages/quiz/index/quiz",
-        "pages/quiz/result/result"
+        "pages/quiz/result/result",
+        "pages/lab/index"
     ],
     "networkTimeout": {
         "request": 10000

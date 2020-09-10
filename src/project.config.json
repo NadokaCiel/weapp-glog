@@ -1,1 +1,174 @@
-{"description":"A weapp(微信小程序) project with ziu","packOptions":{"ignore":[{"type":"suffix","value":".scss"},{"type":"folder","value":"scripts"},{"type":"folder","value":"docs"},{"type":"folder","value":"src"},{"type":"folder","value":"node_modules"},{"type":"file","value":".babelrc"},{"type":"file","value":".gitignore"},{"type":"file","value":"package.json"},{"type":"file","value":"package-lock.json"},{"type":"file","value":"README.md"}]},"setting":{"urlCheck":false,"es6":true,"postcss":true,"minified":true,"newFeature":true,"coverView":true,"nodeModules":true,"autoAudits":false,"showShadowRootInWxmlPanel":true,"scopeDataCheck":false,"uglifyFileName":false,"checkInvalidKey":true,"checkSiteMap":true,"uploadWithSourceMap":true,"babelSetting":{"ignore":[],"disablePlugins":[],"outputPath":""},"useCompilerModule":false,"userConfirmedUseCompilerModuleSwitch":false},"compileType":"miniprogram","libVersion":"2.4.0","appid":"wx919c2fdcbbd9b3af","projectname":"weapp-glog%20-%20dev","debugOptions":{"hidedInDevtools":[]},"isGameTourist":false,"simulatorType":"wechat","simulatorPluginLibVersion":{},"condition":{"search":{"current":-1,"list":[]},"conversation":{"current":-1,"list":[]},"plugin":{"current":-1,"list":[]},"game":{"currentL":-1,"list":[]},"gamePlugin":{"current":-1,"list":[]},"miniprogram":{"current":-1,"list":[{"id":0,"name":"文章列表","pathName":"pages/article/list/list","query":"","scene":null},{"id":-1,"name":"用户首页","pathName":"pages/user/info","query":"","scene":null},{"id":-1,"name":"文章详情","pathName":"pages/article/view/view","query":"id=2","scene":null},{"id":-1,"name":"测试用页面","pathName":"pages/index/index","query":"","scene":null},{"id":4,"name":"试题","pathName":"pages/quiz/index/quiz","query":"id=3","scene":null},{"id":-1,"name":"试题列表","pathName":"pages/quiz/list/list","query":"","scene":null},{"id":-1,"name":"二维码模式","pathName":"pages/quiz/index/quiz","query":"scene=2","scene":null},{"id":-1,"name":"问卷结果","pathName":"pages/quiz/result/result","query":"id=7","scene":null}]}}}
+{
+  "description": "A weapp(微信小程序) project with ziu",
+  "packOptions": {
+    "ignore": [
+      {
+        "type": "suffix",
+        "value": ".scss"
+      },
+      {
+        "type": "folder",
+        "value": "scripts"
+      },
+      {
+        "type": "folder",
+        "value": "docs"
+      },
+      {
+        "type": "folder",
+        "value": "src"
+      },
+      {
+        "type": "folder",
+        "value": "node_modules"
+      },
+      {
+        "type": "file",
+        "value": ".babelrc"
+      },
+      {
+        "type": "file",
+        "value": ".gitignore"
+      },
+      {
+        "type": "file",
+        "value": "package.json"
+      },
+      {
+        "type": "file",
+        "value": "package-lock.json"
+      },
+      {
+        "type": "file",
+        "value": "README.md"
+      }
+    ]
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": true,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": []
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.4.0",
+  "appid": "wx919c2fdcbbd9b3af",
+  "projectname": "weapp-glog%20-%20dev",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
+    "plugin": {
+      "current": -1,
+      "list": []
+    },
+    "game": {
+      "currentL": -1,
+      "list": []
+    },
+    "gamePlugin": {
+      "current": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "current": -1,
+      "list": [
+        {
+          "id": 0,
+          "name": "文章列表",
+          "pathName": "pages/article/list/list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "用户首页",
+          "pathName": "pages/user/info",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "文章详情",
+          "pathName": "pages/article/view/view",
+          "query": "id=2",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "测试用页面",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 4,
+          "name": "试题",
+          "pathName": "pages/quiz/index/quiz",
+          "query": "id=3",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "试题列表",
+          "pathName": "pages/quiz/list/list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "二维码模式",
+          "pathName": "pages/quiz/index/quiz",
+          "query": "scene=2",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "问卷结果",
+          "pathName": "pages/quiz/result/result",
+          "query": "id=7",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "功能测试",
+          "pathName": "pages/lab/index",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,72 @@
+/**  index  **/
+.index {
+  color: #000;
+  text-align: center;
+
+  .rolling-container {
+    margin: 20px auto;
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+    font-size: 14px;
+    height: 30rpx;
+    line-height: 30rpx;
+  }
+
+  .rolling-text {
+    position: absolute;
+    white-space: nowrap;
+    top: 0;
+  }
+
+  .still-text {
+    text-align: center;
+  }
+
+  .content {
+    margin: 80px auto;
+    height: 200px;
+    width: 200px;
+    position: relative;
+  }
+
+  .green-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 50px;
+    width: 120px;
+    border-radius: 8px;
+    background-color: green;
+    z-index: 5;
+  }
+
+  .gift-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    opacity: 0;
+    z-index: 10;
+  }
+
+  .gift-sparkle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 80px;
+    width: 120px;
+    opacity: 0;
+    z-index: 15;
+  }
+}

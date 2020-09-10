@@ -1,0 +1,44 @@
+<!--index-->
+<view class="index">
+  <view class="rolling-container">
+    <view
+      class="rolling-text"
+      style='{{ orientation }}:{{ marqueeDistance }}px;'
+      wx:if="{{needsRolling}}"
+    >
+      {{ text }}
+    </view>
+    <view
+      class="rolling-text"
+      style='{{ orientation }}:{{ marqueeDistance2 }}px;'
+      wx:if="{{needsRolling}}"
+    >
+      {{ text }}
+    </view>
+    <view
+      class="still-text"
+      wx:if="{{!needsRolling}}"
+    >
+      {{ text }}
+    </view>
+  </view>
+  <view
+    class="content"
+    bindtap="moveOut"
+  >
+    <view
+      class="green-box"
+      animation="{{boxTrack}}"
+    ></view>
+    <image
+      class="gift-box"
+      animation="{{giftTrack}}"
+      src="https://nadokaciel.cn/public/uploads/15994596363326f18.png"
+    />
+    <image
+      class="gift-sparkle"
+      animation="{{sparkleTrack}}"
+      src="https://nadokaciel.cn/public/uploads/15994596963098dbx.png"
+    />
+  </view>
+</view>

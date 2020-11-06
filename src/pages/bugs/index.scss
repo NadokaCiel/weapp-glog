@@ -1,0 +1,61 @@
+/**  index  **/
+.bugs {
+  padding: 40rpx;
+
+  .bug-title {
+    margin: 40rpx 0;
+    margin-top: 200rpx;
+    font-size: 40rpx;
+  }
+
+  .line {
+    display: flex;
+    align-items: center;
+  }
+
+  .text-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .text-outer {
+    width: calc(100% - 118rpx);
+    // max-width: 400rpx;
+  }
+
+  .text-inner {
+    max-width: 200rpx;
+    font-size: 32rpx;
+  }
+
+  .ellipsis-1line {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .list-item {
+    margin: 20rpx 0;
+    // height: 120rpx;
+    // line-height: 120rpx;
+  }
+
+  .bug-btn {
+    margin-top: 200rpx;
+    height: 140rpx;
+    line-height: 140rpx;
+  }
+}
+
+.scroll-tabs {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+  background-color: #fff;
+  z-index: 10;
+}

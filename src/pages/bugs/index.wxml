@@ -1,0 +1,108 @@
+<!--index-->
+<scroll-view
+  scroll-y
+  style="height: 100vh;"
+  class="bugs"
+  bindscroll="onMyScroll"
+  scroll-top="{{scrollY}}"
+  id="container"
+  wx:if="{{!showViewList}}"
+>
+  <view
+    class="scroll-tabs"
+    id="scroll-tabs"
+  >当前滚动至：{{toView}}</view>
+  <view
+    class="bug-btn"
+    bindtap="switchList"
+    id="list-title"
+  >列表测试：点击切换至ios不兼容</view>
+  <view
+    class="bug-title"
+    id="text-android"
+  >文本测试：ios不兼容</view>
+  <view
+    class="line"
+    wx:for="{{texts}}"
+    wx:key="index"
+  >
+    <view class="text-box">
+      <view class="text-outer">
+        <view class="text-inner ellipsis-1line">
+          {{item}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <view
+    class="bug-title"
+    id="text-ios"
+  >文本测试：ios兼容</view>
+  <view
+    class="line"
+    wx:for="{{texts}}"
+    wx:key="index"
+  >
+    <view class="text-inner ellipsis-1line">
+      {{item}}
+    </view>
+  </view>
+  <view
+    class="list-item"
+    wx:for="{{list}}"
+    wx:key="index"
+  >
+    {{item}}测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本
+  </view>
+</scroll-view>
+<view
+  class="bugs"
+  wx:if="{{showViewList}}"
+>
+  <view
+    class="scroll-tabs"
+    id="scroll-tabs"
+  >当前滚动至：{{toView}}</view>
+  <view
+    class="bug-btn"
+    bindtap="switchList"
+    id="list-title"
+  >列表测试：点击切换至ios兼容</view>
+  <view
+    class="bug-title"
+    id="text-android"
+  >文本测试：ios不兼容</view>
+  <view
+    class="line"
+    wx:for="{{texts}}"
+    wx:key="index"
+  >
+    <view class="text-box">
+      <view class="text-outer">
+        <view class="text-inner ellipsis-1line">
+          {{item}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <view
+    class="bug-title"
+    id="text-ios"
+  >文本测试：ios兼容</view>
+  <view
+    class="line"
+    wx:for="{{texts}}"
+    wx:key="index"
+  >
+    <view class="text-inner ellipsis-1line">
+      {{item}}
+    </view>
+  </view>
+  <view
+    class="list-item"
+    wx:for="{{list}}"
+    wx:key="index"
+  >
+    {{item}}测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本
+  </view>
+</view>

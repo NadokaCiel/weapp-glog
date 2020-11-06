@@ -59,7 +59,7 @@
     "checkInvalidKey": true,
     "checkSiteMap": true,
     "uploadWithSourceMap": true,
-    "useMultiFrameRuntime": true,
+    "useMultiFrameRuntime": false,
     "useApiHook": true,
     "babelSetting": {
       "ignore": [],
@@ -84,15 +84,12 @@
   "simulatorPluginLibVersion": {},
   "condition": {
     "search": {
-      "current": -1,
       "list": []
     },
     "conversation": {
-      "current": -1,
       "list": []
     },
     "plugin": {
-      "current": -1,
       "list": []
     },
     "game": {
@@ -100,11 +97,9 @@
       "list": []
     },
     "gamePlugin": {
-      "current": -1,
       "list": []
     },
     "miniprogram": {
-      "current": -1,
       "list": [
         {
           "id": 0,
@@ -166,6 +161,21 @@
           "id": -1,
           "name": "功能测试",
           "pathName": "pages/lab/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "测试页",
+          "pathName": "pages/bugs/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "webview测试",
+          "pathName": "pages/webview/webview",
+          "query": "",
           "scene": null
         }
       ]

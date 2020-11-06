@@ -1,7 +1,7 @@
 ## weapp-glog
 ----------------------------
 
-- author: Ciel | Email:ciel.zhang@verystar.cn
+- author: Ciel | Email:727325409@qq.com
 - description: A weapp(微信小程序) project with ziu
 
 ### 使用说明

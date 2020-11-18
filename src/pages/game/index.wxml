@@ -1,0 +1,25 @@
+<view class="game">
+  <view
+    class="animation-image animation-image-1"
+    style="{{ imageStyleArray[0] }}"
+  ></view>
+  <view class="slier-tips" hidden="{{ !gifOpacity }}">
+    <image
+      mode="widthFix"
+      src=""
+    ></image>
+    <view class="tip-txt"></view>
+  </view>
+
+  <scroll-view
+    bindscroll="bindScrollY"
+    bindtouchstart="bindScrollStart"
+    scroll-top="{{ scrollTop }}"
+    scroll-y
+    scroll-anchoring
+    class="cover"
+  >
+    <view style="height:{{ coverHeight }}px"></view>
+  </scroll-view>
+  <!-- <view class="game-toolbar"></view> -->
+</view>

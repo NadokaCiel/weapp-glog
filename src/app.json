@@ -9,7 +9,9 @@
         "pages/quiz/index/quiz",
         "pages/quiz/result/result",
         "pages/lab/index",
-        "pages/bugs/index"
+        "pages/bugs/index",
+        "pages/game/index",
+        "pages/table/index"
     ],
     "networkTimeout": {
         "request": 10000

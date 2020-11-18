@@ -1,0 +1,9 @@
+.bottom-toolbar {
+  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: constant(safe-area-inset-bottom);
+  bottom: env(safe-area-inset-bottom);
+  height: 80rpx;
+}

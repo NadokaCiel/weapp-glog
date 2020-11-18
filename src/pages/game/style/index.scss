@@ -1,0 +1,60 @@
+.game {
+  color: #000;
+  background-color: #0f3329;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+}
+
+.animation-image {
+  background-position: bottom 0 left 0;
+  background-color: gray;
+  background-repeat: no-repeat;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.animation-image-1 {
+  background-image: url('');
+}
+
+.slier-tips {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  opacity: 0.8;
+
+  image {
+    width: 200rpx;
+  }
+
+  .tip-txt {
+    position: absolute;
+    bottom: 200rpx;
+    color: white;
+  }
+}
+
+.cover {
+  height: 100vh;
+  width: 100%;
+  opacity: 0;
+  z-index: 100;
+}
+
+.game-toolbar {
+  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: constant(safe-area-inset-bottom);
+  bottom: env(safe-area-inset-bottom);
+  height: 80rpx;
+}

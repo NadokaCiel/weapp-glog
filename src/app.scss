@@ -41,6 +41,22 @@ image {
   max-height: 100%;
 }
 
+.btn-clean {
+  border-radius: none;
+  border: none;
+  border-color: transparent;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+  text-align: left;
+}
+
+.btn-clean::after {
+  border: none;
+}
+
 .elli {
   overflow: hidden;
   text-overflow: ellipsis;

@@ -11,7 +11,8 @@ console.log(process.env.ENV_DATA);
 console.log(conf);
 App({
   settings: conf,
-  onLaunch() {
+  onLaunch(opt) {
+    console.log('onLaunch', opt);
     creatMiniAuth({
       appid: conf.appId,
       url: `${conf.domain}/mini/ticket`, // 此处为服务端获取ticket的接口url

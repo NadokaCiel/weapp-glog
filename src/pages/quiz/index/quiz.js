@@ -196,7 +196,7 @@ Page({
   },
   toGrade(id) {
     console.log('toGrade', id);
-    wx.navigateTo({
+    wx.redirectTo({
       url: `/pages/quiz/result/result?id=${id}`,
     });
   },

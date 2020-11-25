@@ -1,7 +1,7 @@
 {
-    "pages":[
-        "pages/article/list/list",
+    "pages": [
         "pages/user/info",
+        "pages/article/list/list",
         "pages/index/index",
         "pages/article/view/view",
         "pages/webview/webview",
@@ -10,17 +10,55 @@
         "pages/quiz/result/result",
         "pages/lab/index",
         "pages/bugs/index",
-        "pages/game/index",
-        "pages/table/index"
+        "pages/table/index",
+        "pages/ai/index"
     ],
+    "plugins": {
+        "chatbot": {
+            "version": "1.1.24",
+            "provider": "wx8c631f7e9f2465e1"
+        },
+        "WechatSI": {
+            "version": "0.3.4",
+            "provider": "wx069ba97219f66d99"
+        }
+    },
     "networkTimeout": {
         "request": 10000
     },
-    "window":{
-        "backgroundTextStyle":"light",
+    "tabBar": {
+        "color": "#b6b5bd",
+        "selectedColor": "#04be02",
+        "list": [{
+            "pagePath": "pages/user/info",
+            "iconPath": "./assets/img/icon/icon-user.png",
+            "selectedIconPath": "./assets/img/icon/icon-user-active.png",
+            "text": "用户"
+        }, {
+            "pagePath": "pages/article/list/list",
+            "iconPath": "./assets/img/icon/icon-article.png",
+            "selectedIconPath": "./assets/img/icon/icon-article-active.png",
+            "text": "文章"
+        }, {
+            "pagePath": "pages/quiz/list/list",
+            "iconPath": "./assets/img/icon/icon-quiz.png",
+            "selectedIconPath": "./assets/img/icon/icon-quiz-active.png",
+            "text": "问卷"
+        }, {
+            "pagePath": "pages/ai/index",
+            "iconPath": "./assets/img/icon/icon-toto.png",
+            "selectedIconPath": "./assets/img/icon/icon-toto-active.png",
+            "text": "托托"
+        }]
+    },
+    "window": {
+        "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",
         "navigationBarTitleText": "ciel的实验室",
-        "navigationBarTextStyle":"black"
+        "navigationBarTextStyle": "black"
     },
+    "navigateToMiniProgramAppIdList": [
+        "wx8c631f7e9f2465e1"
+    ],
     "debug": true
 }

@@ -2,3 +2,32 @@
 .user-info {
   color: #000;
 }
+
+.welcome-header {
+  position: relative;
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 140rpx;
+  background-color: #8bc34a;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.2);
+}
+
+.welcome-text {
+  margin-top: 20rpx;
+  margin-left: 40rpx;
+  color: #fff;
+  font-size: 28rpx;
+}
+
+.user-avatar {
+  position: absolute;
+  right: 40rpx;
+  bottom: -60rpx;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 6rpx 20rpx rgba(0, 0, 0, 0.23), 0 6rpx 20rpx rgba(0, 0, 0, 0.16);
+}

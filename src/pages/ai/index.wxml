@@ -1,0 +1,3 @@
+<view class="ai" style="height: 100vh" wx:if="{{flag}}">
+    <chat bind:queryCallback="getQueryCallback"/>
+</view>

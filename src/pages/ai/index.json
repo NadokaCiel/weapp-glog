@@ -1,0 +1,8 @@
+
+  {
+    "components": {},
+    "usingComponents": {
+    	"chat": "plugin://chatbot/chat"
+    }
+  }
+  

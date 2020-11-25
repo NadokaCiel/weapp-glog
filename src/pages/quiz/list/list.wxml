@@ -27,8 +27,8 @@
         <view class="item-content">
           <view class="item-title">{{quiz.title}}</view>
           <view class="item-foot elli elli-1">
-            <text wx:if="{{quiz.creator}}">作者：{{quiz.creator.user_name}}</text>
-            <text>{{md.formatDate(quiz.create_time)}}</text>
+            <text wx:if="{{quiz.creator}}">作者：{{quiz.author}}</text>
+            <text>{{md.formatDate(quiz.create_time, 1)}}</text>
           </view>
         </view>
       </view>

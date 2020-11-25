@@ -43,10 +43,10 @@
         </view>
         <view class="item-content">
           <view class="item-title">{{article.title}}</view>
-          <view class="item-detail elli elli-2">{{article.abstract}}</view>
+          <!-- <view class="item-detail elli elli-2">{{article.abstract}}</view> -->
           <view class="item-foot elli elli-1">
-            <text wx:if="{{article.creator}}">作者：{{article.creator.user_name}}</text>
-            <text>{{md.formatDate(article.create_time)}}</text>
+            <view wx:if="{{article.creator}}">作者：{{article.author}}</view>
+            <view>{{md.formatDate(article.create_time, 1)}}</view>
           </view>
         </view>
       </view>
@@ -70,10 +70,10 @@
           </view>
           <view class="item-content">
             <view class="item-title">{{article.title}}</view>
-            <view class="item-detail elli elli-4">{{article.abstract}}</view>
+            <!-- <view class="item-detail elli elli-4">{{article.abstract}}</view> -->
             <view class="item-foot elli elli-1">
-              <text wx:if="{{article.creator}}">作者：{{article.creator.user_name}}</text>
-              <text>{{md.formatDate(article.create_time)}}</text>
+              <view wx:if="{{article.creator}}">作者：{{article.author}}</view>
+              <view>{{md.formatDate(article.create_time, 1)}}</view>
             </view>
           </view>
         </view>

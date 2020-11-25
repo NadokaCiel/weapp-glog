@@ -34,7 +34,7 @@ Page({
     this.setData({
       page: this.data.page + 1,
     });
-    // this.getList();
+    this.getList();
   },
   getList() {
     const { page, loading } = this.data;

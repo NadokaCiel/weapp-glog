@@ -33,6 +33,7 @@ const formatDate = (value, type = 0) => {
   second = second < 10 ? `0${second}` : second;
   const arr = [
     `${year}-${month}-${date} ${hour}:${minute}:${second}`,
+    `${year}-${month}-${date} ${hour}:${minute}`,
     // year + "-" + month + "-" + date + " " + hour + ":" + minute + ":" + second,
     // year + "年" + month + "月" + date + " " + hour + ":" + minute + ":" + second,
     // year + "年" + month + "月" + date,

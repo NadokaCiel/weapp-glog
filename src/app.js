@@ -57,6 +57,13 @@ App({
     }
     return null;
   },
+  menuShare() {
+    return {
+      title: 'ciel的个人实验室',
+      path: `/pages/user/info?channel=share`,
+      imageUrl: 'https://nadokaciel.cn/public/uploads/1606375705796nuxs.jpg',
+    };
+  },
   globalData: {
     initData: null,
   },

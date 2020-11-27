@@ -200,6 +200,9 @@ Page({
       url: `/pages/quiz/result/result?id=${id}`,
     });
   },
+  onShareAppMessage() {
+    return app.menuShare();
+  },
   onHide() {},
   onUnload() {},
 });

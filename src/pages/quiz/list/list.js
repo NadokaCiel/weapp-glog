@@ -80,5 +80,8 @@ Page({
       url: `/pages/quiz/index/quiz?id=${id}`,
     });
   },
+  onShareAppMessage() {
+    return app.menuShare();
+  },
   onUnload() {},
 });

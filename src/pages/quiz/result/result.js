@@ -39,6 +39,9 @@ Page({
         wx.hideLoading();
       });
   },
+  onShareAppMessage() {
+    return app.menuShare();
+  },
   onHide() {},
   onUnload() {},
 });

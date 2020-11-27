@@ -94,5 +94,8 @@ Page({
       url: `/pages/article/view/view?id=${id}`,
     });
   },
+  onShareAppMessage() {
+    return app.menuShare();
+  },
   onUnload() {},
 });

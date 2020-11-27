@@ -4,30 +4,60 @@
 }
 
 .welcome-header {
-  position: relative;
+  position: fixed;
+  top: 0;
   display: flex;
   // justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 100vw;
-  height: 140rpx;
+  height: 340rpx;
   background-color: #8bc34a;
   box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.2);
 }
 
 .welcome-text {
-  margin-top: 20rpx;
-  margin-left: 40rpx;
+  margin-top: 40rpx;
+  // margin-left: 40rpx;
   color: #fff;
   font-size: 28rpx;
 }
 
 .user-avatar {
-  position: absolute;
-  right: 40rpx;
-  bottom: -60rpx;
+  // position: absolute;
+  // right: 40rpx;
+  // bottom: -60rpx;
+  margin-top: 80rpx;
   width: 120rpx;
   height: 120rpx;
   border-radius: 50%;
   overflow: hidden;
+  border: 6rpx solid #fff;
   box-shadow: 0 6rpx 20rpx rgba(0, 0, 0, 0.23), 0 6rpx 20rpx rgba(0, 0, 0, 0.16);
+}
+
+.info-content {
+  padding-top: 360rpx;
+}
+
+.main-title {
+  margin: 40rpx 0;
+  font-weight: bold;
+  font-size: 42rpx;
+  text-align: center;
+}
+
+.info-para {
+  margin: 20rpx 0;
+  padding: 0 40rpx;
+}
+
+.info-title {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.info-text {
+  margin-top: 12rpx;
+  font-size: 26rpx;
 }

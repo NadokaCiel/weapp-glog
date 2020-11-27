@@ -28,6 +28,7 @@ const options = {
     wx.showLoading();
     app.api.configInfo().then(({ data }) => {
       const list = data.ai_option;
+      const { avatar = 'https://nadokaciel.cn/public/uploads/16063786679124vpk.jpeg' } = data;
       getToken({
         scopes: [],
       }).then(res => {
@@ -39,6 +40,8 @@ const options = {
           userName: "", // 用户昵称
           textToSpeech: false,
           guideList: list,
+          robotHeader: avatar,
+          welcome: ["你好~~", "我是AI狗狗-托托，很高兴认识你😊！", "我会很多技能哦，点击下方的气泡就知道啦~"],
           success: (info) => {
             wx.hideLoading();
             console.log('AI init success: ', info);
@@ -56,11 +59,18 @@ const options = {
     }).catch(err => {
       wx.hideLoading();
       wx.showToast({
-        title: err.msg || "托托失踪了QAQ！",
+        title: err.msg || "托托失踪了QAQ！过会儿再来看看吧...",
         icon: "none",
         duration: 2000,
       });
     });
+  },
+  onShareAppMessage() {
+    return {
+      title: '我是AI狗狗-托托，来和我聊天吧(*^▽^*)',
+      path: `/pages/ai/index?channel=share`,
+      imageUrl: 'https://nadokaciel.cn/public/uploads/1606375705796nuxs.jpg',
+    };
   },
   getQueryCallback(e) {
     console.log(e.detail);

@@ -1,3 +1,24 @@
+<a name="1.1.2"></a>
+## [1.1.2](https://github.com/NadokaCiel/weapp-glog/compare/v1.0.3...v1.1.2) (2020-11-27)
+
+
+### Bug Fixes
+
+* 加强多选显示 ([67d64e8](https://github.com/NadokaCiel/weapp-glog/commit/67d64e8))
+
+
+### Features
+
+* 增加首页和ai机器人】 ([47be33b](https://github.com/NadokaCiel/weapp-glog/commit/47be33b))
+* 新增bug调试页面 ([2d089e7](https://github.com/NadokaCiel/weapp-glog/commit/2d089e7))
+* 新增分享功能 调整界面样式 ([4995358](https://github.com/NadokaCiel/weapp-glog/commit/4995358))
+* 新增功能测试 ([03e0ecc](https://github.com/NadokaCiel/weapp-glog/commit/03e0ecc))
+* 新增菜单滚动效果 ([01a3c42](https://github.com/NadokaCiel/weapp-glog/commit/01a3c42))
+* 界面优化 ai话题配置化 ([50f9e22](https://github.com/NadokaCiel/weapp-glog/commit/50f9e22))
+* 页面更新 ([44019a5](https://github.com/NadokaCiel/weapp-glog/commit/44019a5))
+
+
+
 <a name="1.0.3"></a>
 ## [1.0.3](https://github.com/NadokaCiel/weapp-glog/compare/v1.0.2...v1.0.3) (2020-06-09)
 

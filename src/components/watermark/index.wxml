@@ -1,0 +1,24 @@
+<view class="mark-warp">
+  <slot></slot>
+  <view
+    class="mark-modal"
+    style="transform: translateX({{xoffset || 0}}) translateY({{yoffset || 0}}) rotate({{rotate || 0}}deg); z-index: {{zindex}}"
+    wx:if="{{showMark}}"
+  >
+    <view
+      class="mark-line"
+      wx:for="{{column}}"
+      wx:key="index"
+    >
+      <view
+        class="mark-item"
+        style="color: {{color}}; font-size: {{size}};"
+        wx:for="{{row}}"
+        wx:key="index"
+      >
+        {{mark}}
+      </view>
+    </view>
+  </view>
+  <view class="token-bar" style="color: {{tokenColor}}; font-size: {{tokenSize}};" wx:if="{{token}}">{{token}}</view>
+</view>

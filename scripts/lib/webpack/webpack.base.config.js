@@ -1,9 +1,10 @@
 const path = require('path'),
-  {getEntry, MiniappAutoPlugin} = require('miniapp-auto-webpack-plugin'),
+  {getEntry, MiniappAutoPlugin, getAppJson} = require('miniapp-auto-webpack-plugin'),
   FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin'),
   StyleLintPlugin  = require('stylelint-webpack-plugin'),
   BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin,
   notifier = require('node-notifier'),
+  MiniFunctionPlugin = require('mini-function-plugin'),
   ICON = path.join(process.cwd(), 'scripts/logo.png'),
   ENV = process.env.PRJ_ENV,
   {envComp} = require('../utils'),
@@ -29,6 +30,11 @@ module.exports = function() {
     cssSuffix: conf.cssSuffix,
     compileCssSuffix: conf.compileCssSuffix,
   });
+
+  const subsRoot = getSubsRoot(getAppJson({
+    autoImportAppConfigPath: conf.autoImportAppConfigPath,
+  }).subpackages);
+
   const webpackBaseConfig = {
     mode: process.env.NODE_ENV,
     entry,
@@ -39,6 +45,8 @@ module.exports = function() {
     },
     devtool: false,
     resolve: {
+      mainFields: ['module', 'main'],
+      aliasFields: ['module', 'main'],
       extensions: [`.${conf.miniJsSuffix}`, `.${conf.xmlSuffix}`, '.js', '.json'],
     },
     module: {
@@ -111,12 +119,24 @@ module.exports = function() {
             test: function(module) {
               return (
                 module.resource &&
-                /\.js$/.test(module.resource) &&
+                /\.(js|ts)$/.test(module.resource) &&
                 module.resource.indexOf(
-                  path.join(process.cwd(), 'src')
+                  path.join(process.cwd(), conf.rootSrc)
                 ) === 0);
             },
-            name: 'commons/commons',
+            name: function(module) {
+              const moduleName = module.identifier();
+              const result = subsRoot.filter((sub) => {
+                if (moduleName.includes(path.join(conf.rootSrc, sub))) {
+                  return true;
+                }
+                return false;
+              });
+              if (result.length && result[0]) {
+                return `${result[0]}/commons/commons`
+              }
+              return 'commons/commons';
+            },
             chunks: 'all',
             minSize: 0,
             maxSize: 300 * 1000,
@@ -149,7 +169,8 @@ module.exports = function() {
       ...sourceMapPlugin(conf.sourceMap),
       ...miniCssPlugin(conf.cssSuffix),
       ...copyJsonPlugin(entryJsonFiles, codePath),
-      ...copyProjectConf
+      ...copyProjectConf,
+      new MiniFunctionPlugin(),
     ],
   };
   if (process.env.bundleAnalyzerReport) {
@@ -157,3 +178,15 @@ module.exports = function() {
   }
   return webpackBaseConfig;
 };
+
+function getSubsRoot(subs) {
+  if (!Array.isArray(subs)) {
+    return [];
+  }
+
+  const roots = subs.map((sub) => {
+    return sub.root;
+  });
+
+  return roots;
+}

@@ -61,7 +61,7 @@
     "miniapp-auto-webpack-plugin": "^1.6.5",
     "minimist": "^1.2.0",
     "node-notifier": "^8.0.1",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "ora": "^1.4.0",
     "sass-loader": "^7.1.0",
